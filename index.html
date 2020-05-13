@@ -5,7 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="de">
 <head>
 	<title>input23.de</title>
 	<!-- Meta tag Keywords -->
@@ -13,22 +13,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="Thomas Werner, input23" />
 	
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3346698-6"></script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-3346698-6');
-	</script>
+		if(!window.location.hash) {
+			addEventListener("load", function () {
+				setTimeout(hideURLbar, 0);
+			}, false);
 
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
 		}
 	</script>
 	<!-- //Meta tag Keywords -->
@@ -67,7 +60,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<!-- header -->
 		<!-- navigation -->
-		<div class="main-top">
+		<div class="main-top sticky">
 		 <header>
 			<div class="container-fluid px-lg-5 ">
 				<nav class="mnu mx-auto">
@@ -76,8 +69,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<ul class="menu">
 						<li class="mr-lg-4 mr-3 active"><a href="index.html">Start</a></li>
 						<li class="mr-lg-4 mr-3"><a href="#work" class="scroll">Projekte</a></li>
-						<li class="mr-lg-4 mr-3"><a href="http://links.input23.de" class="scroll">Linkliste</a></li>
-						<li><a href="#contact" class="scroll">Kontakt</a></li>
+						<li class="mr-lg-4 mr-3"><a href="#contact" class="scroll">Kontakt</a></li>
+						<li><a href="/impressum.html">Impressum</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -309,6 +302,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</section>
 	 <!-- //contact -->
+<!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+<script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//tomo.input23.de/tracker.js', 'fathom');
+fathom('set', 'siteId', 'QNNTR');
+fathom('trackPageview');
+</script>
+<!-- / Fathom -->
 
 </body>
 </html>
